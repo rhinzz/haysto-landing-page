@@ -2,6 +2,9 @@
 
 A frontend clone of [haysto.com](https://haysto.com), created to fulfill the Mamikos Frontend Engineer technical test. This is an independent test project and is not an official Haysto website.
 
+## Introduction
+The approach used in this project are assisted with Github Copilot to boost the development. Some output are not correct and needed manual adjustments.
+
 ## Tools used
 
 - HTML for the page structure.
@@ -34,6 +37,16 @@ npm run watch
 ```
 
 The server uses port `3000` by default. Set the `PORT` environment variable to use a different port.
+
+## Deploy to Netlify
+
+The repository includes `netlify.toml` and a Netlify Function for the reviews API. To deploy:
+
+1. Import this repository in Netlify and use the repository root as the base directory.
+2. Set the build command to `npm run build` and the publish directory to `.` (these are also configured in `netlify.toml`).
+3. Deploy the site. Netlify builds the Tailwind stylesheet, publishes the landing page and assets, and routes `/api/reviews` to the serverless function.
+
+The local Express server remains available with `npm start`; Netlify uses its function instead. As with the local API, submitted reviews are returned for immediate display but are not persisted, so only the sample reviews remain after refresh.
 
 ## Reviews API
 
