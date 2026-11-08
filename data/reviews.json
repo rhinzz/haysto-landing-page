@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sample customer",
+    "title": "Clear guidance from start to finish",
+    "content": "The team explained each step in a way that was easy to understand and kept me updated throughout the process.",
+    "date": "2025-02-14",
+    "rating": 5,
+    "isSample": true
+  },
+  {
+    "name": "Sample customer",
+    "title": "Help when I needed it most",
+    "content": "I had questions about my options and got thoughtful, straightforward answers that helped me feel more confident.",
+    "date": "2025-01-28",
+    "rating": 5,
+    "isSample": true
+  },
+  {
+    "name": "Sample customer",
+    "title": "A supportive experience",
+    "content": "Communication was friendly and regular, and I always knew what was happening next.",
+    "date": "2024-12-09",
+    "rating": 5,
+    "isSample": true
+  }
+]

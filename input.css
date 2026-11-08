@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "DM Sans", sans-serif;
+    --font-newsreader: "Newsreader", serif;
+    --font-mono: "DM Mono", monospace;
+    --color-black: #000;
+    --color-brightOrange: #FF6900;
+    --color-brightRed: #F54900;
+    --color-reviewGreen: #05DF72;
+    --color-skyBlue: #BEDBFF;
+    --color-lightOrange: #FFB86A;
+    --color-lightGray: #E5E5E5;
+    --color-brightBlue: #50A2FF;
+    --color-backgroundGray: #F5F5F5;
+}
+
+header > div,
+main > section,
+body > footer {
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.12);
+}
+
+.review-dialog {
+    margin: auto;
+    width: min(36rem, calc(100% - 2rem));
+    max-height: min(90dvh, 48rem);
+    overflow-y: auto;
+    border: 4px solid #000;
+    border-radius: 1rem;
+    padding: 0;
+    background: var(--color-backgroundGray);
+    color: var(--color-black);
+    box-shadow: 8px 8px 0 #000;
+}
+
+.review-dialog::backdrop {
+    background: rgb(0 0 0 / 0.65);
+}
+
+.news-marquee {
+    overflow: hidden;
+    width: calc(100% + 2.5rem);
+    margin-left: -1.25rem;
+    transform: rotate(-1deg);
+}
+
+@media (min-width: 40rem) {
+    .news-marquee {
+        width: calc(100% + 4rem);
+        margin-left: -2rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    .news-marquee {
+        width: calc(100% + 6rem);
+        margin-left: -3rem;
+    }
+}
+
+.news-marquee__track,
+.news-marquee__group {
+    display: flex;
+    width: max-content;
+}
+
+.news-marquee__track {
+    animation: news-marquee-scroll 28s linear infinite;
+}
+
+.news-marquee__group {
+    align-items: center;
+    gap: 4rem;
+    padding-right: 4rem;
+}
+
+.news-marquee__group img {
+    width: auto;
+    height: 2rem;
+    filter: brightness(0) invert(1);
+}
+
+@keyframes news-marquee-scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .news-marquee__track {
+        animation: none;
+    }
+}
+.rating-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.rating-option label {
+  display: inline-block;
+  cursor: pointer;
+  color: #777;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.rating-option input:checked + label,
+.rating-option label:hover {
+  color: #f58220;
+}
+
+.rating-option input:focus-visible + label {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+}

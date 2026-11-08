@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Icon -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Mortgage Brokers | No More Computer Says No | Haysto</title>
+  </head>
+  <body class="grid grid-flow-row gap-8 overflow-x-hidden bg-backgroundGray px-4 py-4 text-black sm:px-6 sm:py-6">
+    <header>
+      <div
+        class="mx-auto flex w-full max-w-[1440px] flex-wrap items-center justify-between gap-4 rounded-2xl bg-black p-4 sm:p-5"
+      >
+        <a href="#home" aria-label="Haysto home">
+          <img
+            class="h-auto w-40"
+            src="./images/haysto_logo.svg"
+            alt="Haysto"
+          />
+        </a>
+        <button
+          class="inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-white/10 lg:hidden"
+          id="navbar-toggle"
+          type="button"
+          aria-controls="navbar-menu"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div id="navbar-menu" class="fixed inset-0 z-50 hidden h-dvh min-h-dvh w-full flex flex-col bg-white p-6 text-black lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:min-h-0 lg:w-auto lg:flex-1 lg:flex-row lg:items-center lg:justify-between lg:bg-transparent lg:p-0 lg:pl-8 lg:text-white">
+          <div class="flex items-center justify-end lg:hidden">
+            <button
+              class="inline-flex items-center justify-center rounded-lg p-2 text-black hover:bg-black/10"
+              id="navbar-close"
+              type="button"
+              aria-label="Close navigation menu"
+            >
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+          <nav aria-label="Main navigation">
+            <ul class="flex flex-col gap-6 py-8 text-xl font-medium lg:flex-row lg:items-center lg:gap-6 lg:py-0 lg:text-base xl:gap-8 xl:text-lg">
+              <li><a class="text-black hover:text-brightOrange lg:text-white" href="#mortgages">Mortgages</a></li>
+              <li><a class="text-black hover:text-brightOrange lg:text-white" href="#how-it-works">How it works</a></li>
+              <li><a class="text-black hover:text-brightOrange lg:text-white" href="#about">About us</a></li>
+            </ul>
+          </nav>
+          <div class="mt-auto grid w-full grid-cols-2 gap-3 pb-2 lg:mt-0 lg:flex lg:w-auto lg:pb-0">
+            <a
+              class="flex items-center justify-center rounded-full bg-black px-3 py-3 text-center text-sm font-semibold text-white hover:bg-black/80 lg:bg-white lg:py-1 lg:text-black lg:hover:bg-lightGray"
+              href="#get-started"
+            >
+              Get started now
+            </a>
+            <a
+              class="flex items-center justify-center rounded-full border-2 border-black px-3 py-3 text-center text-sm font-semibold text-black hover:bg-black hover:text-white lg:border-white lg:py-1 lg:text-white lg:hover:bg-white lg:hover:text-black"
+              href="#login"
+            >
+              Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full min-w-0 max-w-[1440px] overflow-x-clip">
+      <section id="hero" class="mb-8 min-w-0 rounded-2xl bg-brightOrange p-5 sm:p-8 md:p-12">
+        <h1
+          class="max-w-3xl font-newsreader text-5xl font-extrabold leading-none text-white sm:text-6xl md:text-7xl lg:text-8xl"
+        >
+          Mortgages<br />Made Possible
+        </h1>
+        <div class="mt-8 flex flex-col gap-8 md:flex-row">
+          <div class="w-full md:flex-1">
+            <p class="max-w-xl text-xl text-white sm:text-2xl">
+              Bad credit? Self-employed? Complex situation? Tired of 'Computer
+              Says No'? Speak to Haysto.
+            </p>
+            <a
+              class="mt-8 block w-fit rounded-full bg-black px-6 py-3 font-semibold text-white hover:bg-black/80"
+              href="#get-started"
+            >
+              Get Started Now <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+            </a>
+            <a
+              class="mt-3 block w-fit rounded-full border-2 border-black px-6 py-3 font-semibold text-black hover:bg-white hover:text-black"
+              href="#"
+            >
+              <i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>03330 065 363
+            </a>
+            <p class="warning max-w-sm text-md text-black font-semibold py-6">
+              Your home may be repossessed if you do not keep up repayments on
+              your mortgage.
+            </p>
+            <div
+              class="flex w-fit items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm text-black"
+            >
+              <span>Exclusive broker partner to</span>
+              <img
+                class="h-7 w-auto"
+                src="./images/experian.svg"
+                alt="Experian"
+              />
+            </div>
+          </div>
+          <img
+            class="max-h-80 w-full min-w-0 object-contain md:w-auto md:flex-1"
+            src="./images/hero_image.png"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="news-marquee mt-8 bg-black py-3"
+          role="region"
+          aria-label="Haysto in the news"
+        >
+          <div class="news-marquee__track">
+            <ul class="news-marquee__group" aria-label="News publications">
+              <li>
+                <img
+                  src="./images/news/daily_express.svg"
+                  alt="Daily Express"
+                />
+              </li>
+              <li>
+                <img src="./images/news/daily_mail.svg" alt="Daily Mail" />
+              </li>
+              <li>
+                <img
+                  src="./images/news/evening_standard.svg"
+                  alt="Evening Standard"
+                />
+              </li>
+              <li><img src="./images/news/experian.svg" alt="Experian" /></li>
+              <li>
+                <img
+                  src="./images/news/financial_times.svg"
+                  alt="Financial Times"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/news/the_telegraph.svg"
+                  alt="The Telegraph"
+                />
+              </li>
+              <li><img src="./images/news/the_times.svg" alt="The Times" /></li>
+            </ul>
+            <ul class="news-marquee__group" aria-hidden="true">
+              <li><img src="./images/news/daily_express.svg" alt="" /></li>
+              <li><img src="./images/news/daily_mail.svg" alt="" /></li>
+              <li><img src="./images/news/evening_standard.svg" alt="" /></li>
+              <li><img src="./images/news/experian.svg" alt="" /></li>
+              <li><img src="./images/news/financial_times.svg" alt="" /></li>
+              <li><img src="./images/news/the_telegraph.svg" alt="" /></li>
+              <li><img src="./images/news/the_times.svg" alt="" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="award"
+        class="mb-8 flex flex-wrap items-center justify-center gap-6 rounded-2xl bg-brightRed px-4 py-10 sm:gap-8 sm:px-6 sm:py-12 lg:justify-around lg:py-16"
+      >
+        <img
+          class="h-16 w-auto shrink-0 sm:h-20 lg:h-24"
+          src="./images/award/trustpilot.svg"
+          alt="Trustpilot"
+        />
+        <img
+          class="h-16 w-auto shrink-0 sm:h-20 lg:h-24"
+          src="./images/award/judgement_free.svg"
+          alt="Judgement free"
+        />
+        <img
+          class="h-16 w-auto shrink-0 sm:h-20 lg:h-24"
+          src="./images/award/british_bank_award.svg"
+          alt="British Bank Award"
+        />
+        <img
+          class="h-16 w-auto shrink-0 sm:h-20 lg:h-24"
+          src="./images/award/humans_no_bots.svg"
+          alt="Humans, no bots"
+        />
+        <img
+          class="h-16 w-auto shrink-0 sm:h-20 lg:h-24"
+          src="./images/award/best_broker.svg"
+          alt="Best Broker"
+        />
+        <img
+          class="h-16 w-auto shrink-0 sm:h-20 lg:h-24"
+          src="./images/award/peace_of_mind.svg"
+          alt="Peace of mind"
+        />
+      </section>
+
+      <section id="trusted"
+        class="mb-8 grid min-w-0 grid-cols-1 items-center gap-5 rounded-2xl border-b border-lightGray bg-white sm:gap-8 md:grid-cols-2"
+      >
+        <img
+          class="h-64 min-h-0 w-full rounded-t-2xl object-cover sm:h-80 md:h-full md:min-h-64 md:rounded-l-2xl md:rounded-tr-none"
+          src="./images/haysto_experian.png"
+          alt="Haysto and Experian"
+        />
+        <div class="min-w-0 p-4 sm:p-6 md:p-8">
+          <p
+            class="flex max-w-2xl flex-wrap items-center gap-3 text-xl font-bold text-black sm:text-2xl"
+          >
+            Exclusive partner to
+            <img
+              class="h-12 w-auto sm:h-16"
+              src="./images/experian.svg"
+              alt="Experian"
+            />
+          </p>
+          <h2 class="my-5 font-newsreader text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+            The Mortgage Experts Trusted by Experian
+          </h2>
+          <p class="text-lg">
+            Haysto is Experian’s exclusive mortgage partner. If you’re
+            self-employed, have credit challenges, or have been turned away
+            before, our experts know how to find solutions where others can’t.
+          </p>
+          <a
+            class="mt-8 block w-fit rounded-full bg-black px-6 py-3 font-semibold text-white hover:bg-black/80"
+            href="#get-started"
+          >
+            Get Started Now
+          </a>
+        </div>
+      </section>
+
+      <section id="reviews"
+        class="mb-8 rounded-2xl bg-reviewGreen px-4 py-10 text-center sm:px-6 sm:py-16"
+      >
+        <p class="text-base font-mono tracking-widest">Our Reviews</p>
+        <h2 class="mt-4 font-newsreader text-4xl font-extrabold sm:text-5xl md:text-6xl">
+          "They Made the Impossible Possible"
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl text-xl">
+          Haysto is Experian’s exclusive mortgage partner. If you’re
+          self-employed, have credit challenges, or have been turned away
+          before, our experts know how to find solutions where others can’t.
+        </p>
+        <p id="review-load-status" class="mt-6 text-sm" role="status" aria-live="polite">
+          Loading sample reviews...
+        </p>
+        <div
+          id="review-list"
+          class="mx-auto mt-8 grid min-w-0 max-w-6xl gap-4 text-left sm:mt-10 sm:gap-6 md:grid-cols-2 lg:grid-cols-3"
+          aria-label="Customer reviews"
+          aria-busy="true"
+        ></div>
+        <p
+          id="review-submit-status"
+          class="mt-6 text-sm font-semibold"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></p>
+        <button
+          id="open-review-dialog"
+          class="mt-8 rounded-full border-2 border-black px-6 py-3 font-semibold text-black hover:bg-black hover:text-white"
+          type="button"
+        >
+          Leave a review
+        </button>
+      </section>
+
+      <dialog id="review-dialog" class="review-dialog">
+        <form id="review-form" class="space-y-5 p-6 sm:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="font-mono text-base font-semibold">Your experience</p>
+              <h2 class="mt-2 font-newsreader text-3xl font-extrabold sm:text-4xl">Leave a review</h2>
+            </div>
+            <button
+              id="close-review-dialog"
+              class="rounded-lg p-2 text-black hover:bg-black/10"
+              type="button"
+              aria-label="Close review form"
+            >
+              <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div>
+            <label class="mb-2 block font-semibold" for="reviewer-name">Your name</label>
+            <input
+              class="w-full rounded-xl border-2 border-black bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-brightOrange"
+              id="reviewer-name"
+              name="name"
+              type="text"
+              maxlength="80"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div>
+            <label class="mb-2 block font-semibold" for="review-content">Your review</label>
+            <textarea
+              class="w-full resize-y rounded-xl border-2 border-black bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-brightOrange"
+              id="review-content"
+              name="review"
+              rows="5"
+              maxlength="1000"
+              required
+            ></textarea>
+          </div>
+          <fieldset>
+            <legend class="mb-2 font-semibold">Your rating</legend>
+            <div class="flex gap-2" role="radiogroup" aria-label="Rating from 1 to 5 stars">
+              <span class="rating-option">
+                <input id="rating-1" name="rating" type="radio" value="1" required />
+                <label for="rating-1" title="1 star">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <span class="sr-only">1 star</span>
+                </label>
+              </span>
+              <span class="rating-option">
+                <input id="rating-2" name="rating" type="radio" value="2" />
+                <label for="rating-2" title="2 stars">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <span class="sr-only">2 stars</span>
+                </label>
+              </span>
+              <span class="rating-option">
+                <input id="rating-3" name="rating" type="radio" value="3" />
+                <label for="rating-3" title="3 stars">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <span class="sr-only">3 stars</span>
+                </label>
+              </span>
+              <span class="rating-option">
+                <input id="rating-4" name="rating" type="radio" value="4" />
+                <label for="rating-4" title="4 stars">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <span class="sr-only">4 stars</span>
+                </label>
+              </span>
+              <span class="rating-option">
+                <input id="rating-5" name="rating" type="radio" value="5" />
+                <label for="rating-5" title="5 stars">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <span class="sr-only">5 stars</span>
+                </label>
+              </span>
+            </div>
+          </fieldset>
+          <p id="review-form-status" class="text-sm text-black/70" aria-live="polite"></p>
+          <div class="flex flex-col-reverse justify-end gap-3 sm:flex-row">
+            <button
+              class="rounded-full border-2 border-black px-5 py-3 font-semibold hover:bg-black hover:text-white"
+              id="cancel-review"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              class="rounded-full bg-black px-5 py-3 font-semibold text-white hover:bg-black/80"
+              type="submit"
+            >
+              Submit review
+            </button>
+          </div>
+        </form>
+      </dialog>
+
+      <section id="how-it-works"
+        class="mb-8 rounded-2xl border-b border-lightGray bg-white px-4 py-10 text-center sm:px-6 sm:py-12
+        "
+      >
+        <h2 class="mt-4 font-newsreader text-4xl font-extrabold sm:text-5xl md:text-6xl">
+          How It Works
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl text-xl">
+          Three steps to make your mortgage possible - with expert guidance and
+          an innovative process designed to support you every step of the way.
+        </p>
+        <a
+          class="mt-8 mx-auto block w-fit rounded-full bg-black px-6 py-3 font-semibold text-white hover:bg-black/80"
+          href="#get-started"
+        >
+          Get Started Now
+        </a>
+        <div class="mx-auto mt-8 grid min-w-0 w-full max-w-7xl gap-4 px-0 sm:mt-12 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="flex w-full max-w-full flex-col rounded-2xl bg-skyBlue px-6 pt-6 text-left">
+            <i class="fa-solid fa-hands-clapping text-3xl" aria-hidden="true"></i>
+            <h2 class="mt-3 font-sans text-2xl font-bold">Tell Us About You</h2>
+            <p class="mt-2 text-black/70">Fill out a quick 60-second form about your unique situation. It won’t affect your credit score.</p>
+            <img class="mt-4 min-h-32 w-full flex-1 object-cover" src="./images/about_you.png" alt="" />
+          </article>
+          <article class="flex w-full max-w-full flex-col rounded-2xl bg-lightOrange px-6 pt-6 text-left">
+            <i class="fa-solid fa-magnifying-glass text-3xl" aria-hidden="true"></i>
+            <h2 class="mt-3 font-sans text-2xl font-bold">Mortgage Match</h2>
+            <p class="mt-2 text-black/70">We have access to over 100 lenders, including options only available through specialist brokers, to find the best fit for you.</p>
+            <img class="mt-4 min-h-32 w-full flex-1 object-cover" src="./images/mortgage_match.png" alt="" />
+          </article>
+          <article class="flex w-full max-w-full flex-col rounded-2xl bg-lightGray px-6 pt-6 text-left">
+            <i class="fa-solid fa-handshake text-3xl" aria-hidden="true"></i>
+            <h2 class="mt-3 font-sans text-2xl font-bold">Meet Your Experts</h2>
+            <p class="mt-2 text-black/70">Get paired with your dedicated team who'll handle everything from start to finish. Track progress 24/7 in your customer portal - no messy paperwork!</p>
+            <img class="mt-4 min-h-32 w-full flex-1 object-cover" src="./images/experts.png" alt="" />
+          </article>
+        </div>
+      </section>
+
+      <section id="who-we-help"
+        class="mb-8 rounded-2xl border-b border-lightGray bg-brightBlue px-4 py-10 text-center sm:px-6 sm:py-12"
+      >
+        <p class="text-base font-mono tracking-widest">Who We Help</p>
+        <h2 class="mt-4 font-newsreader text-4xl font-extrabold sm:text-5xl md:text-6xl">
+          Who Is Haysto For?
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg sm:text-xl">
+          We’re here for the ones who fall through the cracks. For the individuals, the mavericks, and the complicated. When the "computer says no", we turn to the humans. Trusted brokers and lenders who look for the story behind the numbers.
+        </p>
+        <div class="mx-auto mt-8 grid w-full min-w-0 max-w-7xl items-center gap-5 text-left sm:mt-12 sm:gap-8 md:grid-cols-2">
+          <div class="h-full min-h-64 overflow-hidden rounded-2xl bg-white">
+            <img
+              id="who-we-help-image"
+              class="h-full min-h-64 max-h-[32rem] w-full object-cover"
+              src="./images/bad_credit.png"
+              alt="Support for people with credit challenges"
+            />
+          </div>
+          <div class="space-y-6">
+            <article data-image="./images/bad_credit.png" data-image-alt="Support for people with credit challenges" class="rounded-2xl border-2 border-transparent bg-white p-4 transition-shadow hover:border-black hover:shadow-[4px_4px_0_#000] sm:p-6">
+              <h3 class="font-sans text-xl font-bold sm:text-2xl"><i class="fa-solid fa-triangle-exclamation mr-2" aria-hidden="true"></i>Bad Credit Mortgage</h3>
+              <p class="mt-2 text-black/80">
+                Got bad credit? Doesn't mean you’re bad person.
+              </p>
+              <a class="mt-4 inline-block font-bold" href="#get-started">Find out more <i class="fa-solid fa-arrow-right ml-2 text-black" aria-hidden="true"></i></a>
+            </article>
+            <article data-image="./images/self_employed.png" data-image-alt="Support for self-employed homebuyers" class="rounded-2xl border-2 border-transparent bg-white p-4 transition-shadow hover:border-black hover:shadow-[4px_4px_0_#000] sm:p-6">
+              <h3 class="font-sans text-xl font-bold sm:text-2xl"><i class="fa-solid fa-briefcase mr-2" aria-hidden="true"></i>Self-Employed Mortgage</h3>
+              <p class="mt-2 text-black/80">
+                You hustle hard and still get rejected?! We can help.
+              </p>
+              <a class="mt-4 inline-block font-bold" href="#get-started">Find out more <i class="fa-solid fa-arrow-right ml-2 text-black" aria-hidden="true"></i></a>
+            </article>
+            <article data-image="./images/specialist.png" data-image-alt="Support for specialist mortgage situations" class="rounded-2xl border-2 border-transparent bg-white p-4 transition-shadow hover:border-black hover:shadow-[4px_4px_0_#000] sm:p-6">
+              <h3 class="font-sans text-xl font-bold sm:text-2xl"><i class="fa-solid fa-house mr-2" aria-hidden="true"></i>Specialist Mortgage</h3>
+              <p class="mt-2 text-black/80">
+                Situation a bit more complex? You've come to the right place!
+              </p>
+              <a class="mt-4 inline-block font-bold" href="#get-started">Find out more <i class="fa-solid fa-arrow-right ml-2 text-black" aria-hidden="true"></i></a>
+            </article>
+          </div>
+        </div>
+        <a
+          class="mx-auto mt-8 flex w-full max-w-7xl min-w-0 flex-col items-start justify-between gap-4 rounded-2xl bg-black p-4 text-left text-white sm:p-6 md:flex-row md:items-center"
+          href="#get-started"
+        >
+          <span class="text-xl">
+            <span class="font-semibold">Looking for remortgage?</span> No matter your situation we can help
+          </span>
+          <span class="shrink-0 font-bold">Find out how <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i></span>
+        </a>
+      </section>
+
+      <section id="why-we-exist"
+        class="mb-8 grid min-w-0 items-stretch gap-5 rounded-2xl bg-brightOrange p-5 sm:gap-8 sm:p-8 md:grid-cols-[3fr_1fr] md:p-12"
+      >
+        <div class="flex flex-col justify-center">
+          <p class="mb-4 text-base font-mono">Why We Exist</p>
+          <div>
+            <h2 class="w-fit max-w-full bg-black p-3 font-newsreader text-4xl font-extrabold text-white sm:p-4 sm:text-5xl md:text-6xl">
+              The Mortgage World<br />Is Broken
+            </h2>
+          </div>
+          <p class="mt-5 max-w-2xl text-lg text-black/80 sm:mt-6 sm:text-xl">
+            We get how it feels when you’re refused a mortgage. We’ve been
+            there. If you don’t have a shiny credit rating, you’re self-employed
+            with a complex income or just don’t fit the mould, the odds are
+            completely stacked against you. We just don’t think that’s fair.
+          </p>
+        </div>
+        <img
+          class="h-auto w-full self-start rounded-2xl object-contain"
+          src="./images/broken_key.png"
+          alt="A broken key"
+        />
+        <div class="flex min-w-0 flex-col gap-5 md:col-span-2 md:flex-row sm:gap-6">
+          <article class="flex-1 rounded-2xl border-2 border-black bg-white p-6 shadow-[6px_6px_0_#000]">
+            <h3 class="font-sans text-2xl font-bold">You Could Still Get a Mortgage</h3>
+            <p class="mt-2 text-black/80">Been turned down elsewhere? You're not alone! We see things differently. Bad credit or tricky situation? We're the experts in making mortgages possible.</p>
+          </article>
+          <article class="flex-1 rounded-2xl border-2 border-black bg-white p-6 shadow-[6px_6px_0_#000]">
+            <h3 class="font-sans text-2xl font-bold">Speak to a Real Person</h3>
+            <p class="mt-2 text-black/80">No bots, no automated decisions. Our experts listen, understand your story, and find what works for you.</p>
+          </article>
+          <article class="flex-1 rounded-2xl border-2 border-black bg-white p-6 shadow-[6px_6px_0_#000]">
+            <h3 class="font-sans text-2xl font-bold">Founded After Our Own Experiences</h3>
+            <p class="mt-2 text-black/80">We started Haysto because we’ve been in your shoes. It’s a judgement-free zone here. Just a dedicated team helping you get the right mortgage.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="who-we-are"
+        class="mb-8 rounded-2xl bg-white px-4 py-10 text-center sm:px-6 sm:py-16"
+      >
+        <p class="text-base font-mono tracking-widest">Who We Are</p>
+        <h2 class="mt-4 font-newsreader text-4xl font-extrabold sm:text-5xl md:text-6xl">
+          Real People, Real Possibilities
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg sm:text-xl lg:text-2xl">
+          We don’t use technology to replicate humans. We use technology to enable us to spend more time on what matters most. Understanding your unique situation, and finding the right mortgage for you. Meet the experts. Not the robots.
+        </p>
+        <img src="./images/people.png" class="mx-auto mt-6 w-full max-w-4xl object-contain sm:mt-8" alt="people">
+        <div class="mx-auto mt-8 flex w-full max-w-7xl min-w-0 flex-col gap-4 px-0 text-left sm:mt-12 sm:gap-6 sm:px-2 md:flex-row">
+          <article class="flex flex-1 items-center flex-col gap-0 rounded-2xl bg-backgroundGray p-6 md:flex-row">
+            <h3 class="m-0 font-newsreader text-5xl leading-none font-bold text-brightOrange md:flex-[1]">75+</h3>
+            <p class="font-semibold text-black md:flex-[3]">Team members working to make mortgages possible.</p>
+          </article>
+          <article class="flex flex-1 items-center flex-col gap-0 rounded-2xl bg-backgroundGray p-6 md:flex-row">
+            <h3 class="m-0 font-newsreader text-5xl leading-none font-bold text-brightOrange md:flex-[1]">4:1</h3>
+            <p class="font-semibold text-black md:flex-[3]">Every customer gets a team of 4 experts.</p>
+          </article>
+          <article class="flex flex-1 items-center flex-col gap-0 rounded-2xl bg-backgroundGray p-6 md:flex-row">
+            <h3 class="m-0 font-newsreader text-5xl leading-none font-bold text-brightOrange md:flex-[1]">5*</h3>
+            <p class="font-semibold text-black md:flex-[3]">Proven track record of providing an outstanding service.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="what-people-say" class="grid min-w-0 grid-cols-1 items-center gap-6 rounded-2xl bg-white p-5 sm:gap-8 sm:p-8 md:grid-cols-2 md:p-12">
+        <div class="flex min-w-0 flex-col items-start text-left">
+          <p class="text-base font-mono">What People Say</p>
+          <h2 class="mt-4 font-newsreader text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+            See How We Make A Difference
+          </h2>
+          <p class="mt-3 text-black/70">
+            Life-changing stories from real customers. Read how we made mortgages possible for people who once thought they’d never own a home.
+          </p>
+          <a
+            class="mt-8 block w-fit rounded-full bg-black px-6 py-3 font-semibold text-white hover:bg-black/80"
+            href="#"
+          >
+            Read Customer Stories
+          </a>
+        </div>
+        <div class="min-w-0 overflow-hidden rounded-2xl bg-backgroundGray">
+            <div class="p-6">
+                <i class="fa-solid fa-quote-left mb-3 text-5xl text-brightOrange" aria-hidden="true"></i>
+                <p class="mb-4 text-xl font-semibold text-black">
+                    We’re over the moon that we can now call ourselves homeowners for the first time. We owe everything to Haysto.
+                </p>
+                <h3 class="font-newsreader text-3xl font-bold">Kate &amp; Arjun</h3>
+                <a class="mt-3 text-brightOrange text-lg font-bold" href="#">
+                  Read Their Story <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+            </div>
+          
+            <img
+                class="h-full min-h-64 w-full rounded-b-2xl object-cover"
+                src="./images/couple.png"
+                alt="A couple sharing their story"
+            />
+        </div>
+      </section>
+    </main>
+
+    <footer class="mx-auto w-full max-w-[1440px] rounded-2xl bg-black p-5 text-white sm:p-8 lg:p-10">
+      <div class="mx-auto mb-4 flex w-full max-w-[1440px] min-w-0 flex-col items-start gap-8 sm:gap-10 lg:flex-row lg:justify-between lg:gap-12">
+        <div class="w-full min-w-0 lg:max-w-sm">
+            <a class="shrink-0" href="#home" aria-label="Haysto home">
+            <img
+                class="h-auto w-32 sm:w-40"
+                src="./images/haysto_logo.svg"
+                alt="Haysto"
+            />
+            </a>
+            <p class="mt-4 max-w-lg font-semibold">Bad Credit? Self-Employed? Complex Income? We understand and can help you explore mortgage options that suit your needs.</p>
+        </div>
+        <nav class="flex w-full min-w-0 flex-col gap-8 sm:flex-row sm:justify-between lg:w-auto lg:flex-1" aria-label="Footer site links">
+          <ul class="flex flex-col gap-3 text-sm">
+            <p class="text-base font-mono font-semibold">Information</p>
+            <li><a class="hover:text-brightOrange" href="#who-we-help">Bad Credit Mortgages</a></li>
+            <li><a class="hover:text-brightOrange" href="#who-we-help">Self-Employed Mortgages</a></li>
+            <li><a class="hover:text-brightOrange" href="#who-we-help">Specialist Mortgages</a></li>
+            <li><a class="hover:text-brightOrange" href="#mortgages">Remortgages</a></li>
+            <li><a class="hover:text-brightOrange" href="#faqs">Additional Mortgage Information</a></li>
+          </ul>
+          <ul class="flex flex-col gap-3 text-sm">
+            <p class="text-base font-mono font-semibold">Tools &amp; Guides</p>
+            <li><a class="hover:text-brightOrange" href="#mortgages">Mortgage Guides</a></li>
+            <li><a class="hover:text-brightOrange" href="#mortgages">Mortgage Calculators</a></li>
+            <li><a class="hover:text-brightOrange" href="#about">Our Blog</a></li>
+          </ul>
+        </nav>
+        <nav class="w-full min-w-0 sm:w-auto" aria-label="Footer contact links">
+          <ul class="flex flex-col gap-3 text-sm">
+            <p class="text-base font-mono font-semibold">Company</p>
+            <li><a class="hover:text-brightOrange" href="#about">About Us</a></li>
+            <li><a class="hover:text-brightOrange" href="#how-it-works">How It Works</a></li>
+            <li><a class="hover:text-brightOrange" href="mailto:careers@haysto.com">Careers</a></li>
+            <li><a class="hover:text-brightOrange" href="mailto:hello@haysto.com">Contact Us</a></li>
+            <li><a class="hover:text-brightOrange" href="#terms">Terms Of Use</a></li>
+            <li><a class="hover:text-brightOrange" href="#cookies">Cookie Policy</a></li>
+            <li><a class="hover:text-brightOrange" href="#privacy">Privacy Policy</a></li>
+            <li><a class="hover:text-brightOrange" href="#home">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr class="mx-2 border-t-4 border-white opacity-100 sm:mx-6">
+      <div class="image-logo my-4 flex flex-wrap items-center justify-between gap-4">
+        <img class="h-auto max-h-14 w-auto max-w-[45%] object-contain sm:max-h-20" src="./images/award_2.svg" alt="Award">
+        <img class="h-auto max-h-12 w-auto max-w-[45%] object-contain sm:max-h-16" src="./images/haysto_logo.svg" alt="Haysto">
+      </div>
+      <hr class="mx-2 border-t-4 border-white opacity-100 sm:mx-6">
+      <p class="break-words py-3 text-xs sm:text-sm">Haysto, a trading style of Haysto Ltd, is an appointed representative of HL Partnership Limited, which is authorised and regulated by the Financial Conduct Authority.Registered Office: Haysto, Crystal House, 24 Cattle Market Street, Norwich, NR1 3DY. Registered in England and Wales No. 12527065</p>
+      <p class="break-words py-3 text-xs sm:text-sm">There may be a fee for mortgage advice. The exact amount depends upon your circumstances, but will range from £649 to £1699, and this will be discussed and agreed with you at the earliest opportunity.</p>
+      <p class="break-words py-3 text-xs sm:text-sm">There may be a fee for mortgage advice. The exact amount depends upon your circumstances, but will range from £649 to £1699, and this will be discussed and agreed with you at the earliest opportunity.</p>
+      <p class="break-words py-3 text-xs font-semibold sm:text-sm">Your home may be repossessed if you do not keep up repayments on your mortgage.</p>
+    </footer>
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>
